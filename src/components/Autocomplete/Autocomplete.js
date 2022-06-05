@@ -17,7 +17,7 @@ const Autocomplete = ({tags, setTags, suggestionsList}) => {
 
   const addToTagList = (tagName) => {
     if (tagName !== '') {
-      setTags(prevTag => [prevTag, tagName])
+      setTags(prevTag => [...prevTag, tagName])
       setUserTagInput('')
     }
   }
