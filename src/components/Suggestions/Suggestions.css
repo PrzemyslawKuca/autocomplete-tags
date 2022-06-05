@@ -1,0 +1,26 @@
+.suggested-list {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #919191;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 5px;
+}
+
+.suggested-list ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.suggested-list ul li {
+    padding: 3px 10px;
+}
+
+.suggested-list ul li.name:hover {
+    background-color: #d4d4d4;
+}
+
+.active {
+    background-color: #d4d4d4;
+}
