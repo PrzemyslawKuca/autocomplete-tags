@@ -22,18 +22,11 @@ const Autocomplete = ({tags, setTags, suggestionsList}) => {
     }
   }
 
-  const showSuggestionsDropdown = () => {
-    setSuggestionsDropdownVisible(true)
-  }
-  const hideSuggestionsDropdown = () => {
-    setSuggestionsDropdownVisible(false)
-  }
-
   const handleClickOutside = (event) => {
     if (tagsContainerRef.current && !tagsContainerRef.current.contains(event.target)) {
-      hideSuggestionsDropdown();
+      setSuggestionsDropdownVisible(false)
     } else {
-      showSuggestionsDropdown();
+      setSuggestionsDropdownVisible(true)
     }
   }
 
@@ -92,7 +85,7 @@ const Autocomplete = ({tags, setTags, suggestionsList}) => {
       </div>
       <Suggestions suggestionRef={suggestionRef} filteredList={filteredList}
                    isVisible={suggestionsDropdownVisible}
-                   cursor={cursor}/>
+                   cursor={cursor} setCursor={setCursor} addTag={addToTagList}/>
     </div>
   )
 }

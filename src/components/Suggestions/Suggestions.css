@@ -8,6 +8,10 @@
     margin-top: 5px;
 }
 
+.suggested-list.limit{
+    overflow-y: hidden;
+}
+
 .suggested-list ul {
     padding: 0;
     list-style-type: none;
